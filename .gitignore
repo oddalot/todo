@@ -1,0 +1,14 @@
+node_modules
+/coverage
+firebase-debug.log
+npm-debug.log
+
+.DS_Store
+.idea
+*.iml
+# swap
+
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
