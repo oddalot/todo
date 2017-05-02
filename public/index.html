@@ -18,8 +18,16 @@
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button>Press Me</button>
-    <img src="/images/check-logo.svg" alt="" />
+    <div class="main-container">
+      <img class="check-logo" src="/images/check-logo.svg" alt="" />
+      <div class="input-wrap">
+        <div class="input-wrapper"><span class="lnr lnr-user"></span><input class="input" type="text" placeholder="Username" /></div>
+        <div class="input-wrapper"><span class="lnr lnr-lock"></span><input class="input" type="password" placeholder="Password" /></div>
+      </div>
+      <div class="btn-wrap">
+        <button class="btn">Sign In</button>
+      </div>
+    </div>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         try {

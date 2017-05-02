@@ -1,8 +1,10 @@
+@import 'reset';
 @import 'fonts';
+@import 'colors';
 
 html {
   height: 100%;
-  font-family: $Lato;
+  font-family: 'Lato-Light';
 }
 
 body { 
@@ -14,16 +16,79 @@ body {
   background-attachment: fixed,	fixed, fixed;
 }
 
-button {
-  border: none;
-  padding: 10px;
-  width: 350px;
-  height: 50px;
-  color: white;
-  background-color: blue;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  border-radius: 30px;
-  font-family: $Lato;
+.main-container {
+  margin: 0 auto;
+  max-width: 480px;
+  min-width: 360px;
+  max-height: 1000px;
 }
+
+.btn-wrap {
+  padding: 50px 25px;
+}
+
+.btn {
+  border: none;
+  padding: 20px 0;
+  background-color: $td-pink;
+  font-size: 20px;
+  color: $td-white;
+  width: 100%;
+  border-radius: 50px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+}
+
+.input-wrap {
+  padding-left: 25px;
+
+  .lnr {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+  }
+
+  .input-wrapper {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 25px;
+  }
+
+  .input {
+    display: inline-block;
+    border: none;
+    padding: 14px 0 14px 0;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    color: $td-white;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $td-white;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $td-white;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $td-white;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $td-white;
+    }
+  }
+}
+
+.check-logo {
+  display: block;
+  margin: 110px auto;
+  width: 200px;
+}
+
