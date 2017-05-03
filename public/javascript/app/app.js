@@ -22,6 +22,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     .when("/signup", {
       templateUrl: "/javascript/app/templates/signup.html",
       controller: "SignupCtrl"
+    })
+    .when("/list", {
+      templateUrl: "/javascript/app/templates/list.html",
+      controller: "ListCtrl"
     });
 
     $locationProvider.html5Mode(true);

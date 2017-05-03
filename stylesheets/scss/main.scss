@@ -171,3 +171,49 @@ form {
 .fade.ng-enter.ng-enter-active {
   opacity:1;
 }
+
+.list-wrap {
+  position: relative;
+  background-color: $td-white;
+  margin-top: 100px;
+
+  .plus-button {
+    position: absolute;
+    top: -30px;
+    right: 15px;
+    font-size: 50px;
+    background-color: $td-pink;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: $td-white;
+    border-radius: 100%;
+  }
+
+  .list-item-wrap {
+    position: relative;
+    height: 85px;
+    font-size: 20px;
+    line-height: 85px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 90px;
+  }
+
+  .item-circle {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #ccc;
+  }
+}
+
+.mg-left-25 {
+  margin-left: 25px;
+}
