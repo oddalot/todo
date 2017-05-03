@@ -3,42 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>To Do | Simple To Do App</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/3.9.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/3.9.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/3.9.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/3.9.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
+
+    <script src="/javascript/angular.js"></script>
+    <script src="/javascript/angular-animate.js"></script>
+    <script src="/javascript/angular-route.js"></script>
+    <script src="/javascript/firebase.js"></script>
+    <script src="/javascript/angularfire.js"></script>
+    <script src="/javascript/app/app.js"></script>
+    <script src="/javascript/app/controllers/mainCtrl.js"></script>
+    <script src="/javascript/app/controllers/signupCtrl.js"></script>
+    <script src="/javascript/app/controllers/signinCtrl.js"></script>
+    <base href="/">
   </head>
-  <body>
+  <body ng-app="todoApp">
     <div class="main-container">
-      <img class="check-logo" src="/images/check-logo.svg" alt="" />
-      <div class="input-wrap">
-        <div class="input-wrapper"><span class="lnr lnr-user"></span><input class="input" type="text" placeholder="Username" /></div>
-        <div class="input-wrapper"><span class="lnr lnr-lock"></span><input class="input" type="password" placeholder="Password" /></div>
-      </div>
-      <div class="btn-wrap">
-        <button class="btn">Sign In</button>
-      </div>
+      <div ng-view class="fade"></div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-        //  document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-        //  document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
   </body>
 </html>

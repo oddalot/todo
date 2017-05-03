@@ -1,0 +1,13 @@
+<form>
+  <img class="check-logo" src="/images/check-logo.svg" alt="" />
+  <div class="input-wrap">
+    <div class="input-wrapper"><span class="lnr lnr-envelope left-icon"></span><input class="input" type="text" ng-model="userValues.email" placeholder="Email Address" /></div>
+    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.password" placeholder="Password" /><span class="lnr lnr-question-circle right-icon"></span></div>
+  </div>
+  <div class="btn-wrap">
+    <button class="btn" ng-click="signIn()" type=submit>Sign In</button>
+  </div>
+  <div class="bottom-links">
+    Don't have an account? <a href="/signup">Sign Up</a>
+  </div>
+</form>
