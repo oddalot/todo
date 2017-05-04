@@ -175,7 +175,7 @@ form {
 .list-wrap {
   position: relative;
   background-color: $td-white;
-  margin-top: 100px;
+  margin-top: 75px;
 
   .plus-button {
     position: absolute;
@@ -189,6 +189,8 @@ form {
     text-align: center;
     color: $td-white;
     border-radius: 100%;
+    z-index: 100;
+    cursor: pointer;
   }
 
   .list-item-wrap {
@@ -211,9 +213,55 @@ form {
     height: 30px;
     border-radius: 100%;
     background-color: #ccc;
+    cursor: pointer;
+  }
+
+  .lnr-checkmark-circle {
+    position: absolute;
+    top: 25px;
+    left: 34px;
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+  .lnr-trash {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    cursor: pointer;
+  }
+
+  .list-item-input {
+    border: none;
+    background-color: transparent;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $td-white;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $td-white;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $td-white;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $td-white;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
 .mg-left-25 {
   margin-left: 25px;
+}
+
+.mg-top-10 {
+  margin-top: 10px;
 }

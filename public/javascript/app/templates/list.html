@@ -1,31 +1,14 @@
 <form>
   <a href="/signin"><span class="lnr lnr-arrow-left"></span></a>
 
-  <h2 class="mg-left-25">To Do List</h2>
+  <h2 class="mg-left-25 mg-top-10">To Do List</h2>
   <div class="list-wrap">
-    <span class="plus-button">+</span>
-    <div class="list-item-wrap">
-      <span class="item-circle"></span>
-      <span class="item-check"></span>
-      <span class="list-item-text">Carrots</span>
-      <span class="item-star"></span>
+    <span class="plus-button" ng-click="addNewItem()">+</span>
+    <div class="list-item-wrap" ng-repeat="listItem in listItems">
+      <span class="item-circle" ng-show="!listItem.checked" ng-click="checkItem(listItem)"></span>
+      <span class="lnr lnr-checkmark-circle" ng-show="listItem.checked" ng-click="uncheckItem(listItem)"></span>
+      <input id="{{listItem.$id}}" class="list-item-input" type="text" ng-model="listItem.text" />
+      <span class="lnr lnr-trash" ng-click="deleteItem(listItem)"></span>
     </div>
-    <div class="list-item-wrap">
-      <span class="item-circle"></span>
-      <span class="item-check"></span>
-      <span class="list-item-text">Carrots</span>
-      <span class="item-star"></span>
-    </div>
-    <div class="list-item-wrap">
-      <span class="item-circle"></span>
-      <span class="item-check"></span>
-      <span class="list-item-text">Carrots</span>
-      <span class="item-star"></span>
-    </div>
-    <div class="list-item-wrap">
-      <span class="item-circle"></span>
-      <span class="item-check"></span>
-      <span class="list-item-text">Carrots</span>
-      <span class="item-star"></span>
-    </div>
+  </div>
 </form>
