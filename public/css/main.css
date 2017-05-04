@@ -869,3 +869,6 @@ form .camera-wrap {
 
 .mg-top-10 {
   margin-top: 10px; }
+
+#file {
+  display: none; }
