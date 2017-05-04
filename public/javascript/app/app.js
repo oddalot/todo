@@ -12,12 +12,34 @@ firebase.initializeApp(config);
 // Initialize the angular app
 var app = angular.module('todoApp', ["ngRoute", "ngAnimate", "firebase"]);
 
+app.run(["$rootScope", "$location", function($rootScope, $location) {
+  $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
+    if (error === "AUTH_REQUIRED") {
+      $location.path("/signin");
+    }
+  });
+}]);
+
 // routing
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
+    .when("/", {
+      templateUrl: "/javascript/app/templates/signin.html",
+      controller: "SigninCtrl",
+      resolve: {
+        "currentAuth": ["AuthService", function(AuthService) {
+          return AuthService.$waitForSignIn();
+        }]
+      }
+    })
     .when("/signin", {
       templateUrl: "/javascript/app/templates/signin.html",
-      controller: "SigninCtrl"
+      controller: "SigninCtrl",
+      resolve: {
+        "currentAuth": ["AuthService", function(AuthService) {
+          return AuthService.$waitForSignIn();
+        }]
+      }
     })
     .when("/signup", {
       templateUrl: "/javascript/app/templates/signup.html",
@@ -25,7 +47,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     })
     .when("/list", {
       templateUrl: "/javascript/app/templates/list.html",
-      controller: "ListCtrl"
+      controller: "ListCtrl",
+      resolve: {
+        "currentAuth": ["AuthService", function(AuthService) {
+          return AuthService.$requireSignIn();
+        }]
+      }
     });
 
     $locationProvider.html5Mode(true);

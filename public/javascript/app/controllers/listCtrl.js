@@ -1,5 +1,6 @@
-app.controller('ListCtrl', ['$scope', '$firebaseAuth', '$firebaseArray', function($scope, $firebaseAuth, $firebaseArray) {
-  var ref = firebase.database().ref().child("listItems");
+app.controller('ListCtrl', ['$scope', '$firebaseAuth', '$firebaseArray', 'AuthService', 'currentAuth', '$location', function($scope, $firebaseAuth, $firebaseArray, AuthService, currentAuth, $location) {
+  $scope.auth = AuthService;
+  var ref = firebase.database().ref().child("users").child(currentAuth.uid);
   $scope.listItems = $firebaseArray(ref);
 
   $scope.addNewItem = function () {
@@ -24,4 +25,10 @@ app.controller('ListCtrl', ['$scope', '$firebaseAuth', '$firebaseArray', functio
     listItem.checked = false;
     $scope.listItems.$save(listItem);
   };
+
+  $scope.auth.$onAuthStateChanged(function(firebaseUser) {
+    if (firebaseUser == null) {
+      $location.path("/signin");
+    }
+  });
 }]);

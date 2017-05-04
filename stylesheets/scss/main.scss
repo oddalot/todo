@@ -58,7 +58,7 @@ h2 {
 form {
   .lnr-arrow-left {
     display: inline-block;
-    margin: 20px 10px;
+    margin: 20px 14px;
     font-size: 30px;
   }
 
@@ -69,6 +69,7 @@ form {
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     position: relative;
+    cursor: pointer;
 
     .lnr-camera {
       position: absolute;
@@ -227,7 +228,7 @@ form {
   .lnr-trash {
     position: absolute;
     right: 40px;
-    top: 30px;
+    top: 32px;
     cursor: pointer;
   }
 
