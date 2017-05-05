@@ -6,7 +6,7 @@ app.controller('SignupCtrl', ['$scope', '$firebaseAuth', '$location', '$firebase
     $scope.authObj.$createUserWithEmailAndPassword($scope.userValues.email, $scope.userValues.password)
     .then(function(firebaseUser) {
       if (firebaseUser) {
-        var storageRef = firebase.storage().ref(firebaseUser.uid);
+        var storageRef = firebase.storage().ref("images").child(firebaseUser.uid).child("userImage");
         $scope.storage = $firebaseStorage(storageRef);
         var f = document.getElementById('file').files[0];
         if (f != null) {

@@ -19,4 +19,14 @@ app.controller('SigninCtrl', ['$scope', '$firebaseAuth', '$location', 'currentAu
       });
     }
   };
+
+  $scope.sendPasswordReset = function () {
+    if ($scope.userValues.email != null && $scope.userValues.email != '') {
+      $scope.authObj.$sendPasswordResetEmail($scope.userValues.email).then(function() {
+        console.log("Password reset email sent successfully!");
+      }).catch(function(error) {
+        console.error("Error: ", error);
+      });
+    }
+  };
 }]);

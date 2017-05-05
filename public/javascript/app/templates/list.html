@@ -1,9 +1,11 @@
 <form>
-  <a href="/signin"><span class="lnr lnr-arrow-left"></span></a>
-  <button ng-click="auth.$signOut()">Sign Out</button>
-  <img firebase-src="{{uid}}" />
+  <div class="overflow-hidden">
+    <h2 class="mg-left-25 mg-top-h2">To Do List</h2>
+    <div ng-click="auth.$signOut()" class="user-image-wrap">
+      <img class="user-image" firebase-src="/images/{{uid}}/userImage" />
+    </div>
+  </div>
 
-  <h2 class="mg-left-25 mg-top-10">To Do List</h2>
   <div class="list-wrap">
     <span class="plus-button" ng-click="addNewItem()">+</span>
     <div class="list-item-wrap" ng-repeat="listItem in listItems">

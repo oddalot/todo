@@ -104,6 +104,7 @@ form {
     position: absolute;
     right: 25px;
     top: 14px;
+    cursor: pointer;
   }
 
   .input-wrapper {
@@ -265,8 +266,35 @@ form {
 
 .mg-top-10 {
   margin-top: 10px;
+  float: left;
 }
 
 #file {
   display: none;
+}
+
+.user-image-wrap {
+  position: relative;
+  width: 40px;
+  height: 40px; 
+  overflow: hidden;
+  float: right;
+  margin: 24px 14px 0 0;
+  cursor: pointer;
+
+  .user-image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.mg-top-h2 {
+  margin-top: 50px;
+  float: left;
 }
