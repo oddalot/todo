@@ -24,6 +24,7 @@ app.controller('SigninCtrl', ['$scope', '$firebaseAuth', '$location', 'currentAu
     if ($scope.userValues.email != null && $scope.userValues.email != '') {
       $scope.authObj.$sendPasswordResetEmail($scope.userValues.email).then(function() {
         console.log("Password reset email sent successfully!");
+        $scope.showTooltip = false;
       }).catch(function(error) {
         console.error("Error: ", error);
       });
