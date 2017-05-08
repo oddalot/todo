@@ -174,10 +174,15 @@ form {
   opacity:1;
 }
 
+.list-background {
+  padding-bottom: 75px;
+  background-image: linear-gradient(to top left, rgba(103, 13, 16, 0.5), rgba(9, 39, 86, 0.7)), url('images/mountain.jpg'), ;
+  background-size: cover, cover;
+}
+
 .list-wrap {
   position: relative;
   background-color: $td-white;
-  margin-top: 75px;
 
   .plus-button {
     position: absolute;
@@ -281,6 +286,16 @@ form {
   float: right;
   margin: 24px 14px 0 0;
   cursor: pointer;
+
+  .user-image-dot {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: $td-pink;
+  }
 
   .user-image {
     position: absolute;

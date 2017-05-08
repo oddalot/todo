@@ -795,10 +795,14 @@ form .camera-wrap {
 .fade.ng-enter.ng-enter-active {
   opacity: 1; }
 
+.list-background {
+  padding-bottom: 75px;
+  background-image: linear-gradient(to top left, rgba(103, 13, 16, 0.5), rgba(9, 39, 86, 0.7)), url("images/mountain.jpg");
+  background-size: cover, cover; }
+
 .list-wrap {
   position: relative;
-  background-color: #fff;
-  margin-top: 75px; }
+  background-color: #fff; }
   .list-wrap .plus-button {
     position: absolute;
     top: -30px;
@@ -883,6 +887,14 @@ form .camera-wrap {
   float: right;
   margin: 24px 14px 0 0;
   cursor: pointer; }
+  .user-image-wrap .user-image-dot {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #f36; }
   .user-image-wrap .user-image {
     position: absolute;
     width: 100%;
