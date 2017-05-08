@@ -721,6 +721,17 @@ form .camera-wrap {
     font-weight: 100;
     top: 39px;
     left: 42px; }
+  form .camera-wrap .image-preview-wrap {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 40px;
+    height: 40px; }
+    form .camera-wrap .image-preview-wrap #image-preview {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0; }
 
 .input-wrap {
   padding-left: 25px; }
