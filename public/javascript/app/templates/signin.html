@@ -7,7 +7,7 @@
         <span ng-show="form.email.$error.email">Invalid Email Address</span>
       </div>
     </div>
-    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.password" placeholder="Password" name="password" required /><span ng-click="showTooltip=!showTooltip" class="lnr lnr-question-circle right-icon"><div ng-show="showTooltip" class="password-tooltip fade"><ul><li ng-click="sendPasswordReset();showTooltip=false">Send password reset</li></ul></div></span>
+    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.password" placeholder="Password" name="password" required /><span ng-click="showTooltip=true;$event.stopPropagation();" td-off-click="showTooltip=false" class="lnr lnr-question-circle right-icon"><div ng-show="showTooltip" class="password-tooltip fade"><ul><li ng-click="sendPasswordReset();showTooltip=false">Send password reset</li></ul></div></span>
       <div class="input-message" ng-show="form.$submitted || form.password.$touched">
         <div ng-show="form.password.$error.required">Password required</div>
       </div>
