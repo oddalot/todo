@@ -750,6 +750,26 @@ form .camera-wrap {
     right: 25px;
     top: 14px;
     cursor: pointer; }
+    .input-wrap .lnr.right-icon .password-tooltip {
+      position: absolute;
+      top: 100%;
+      right: 100%;
+      width: 200px;
+      background-color: #fff;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 300;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      .input-wrap .lnr.right-icon .password-tooltip ul {
+        text-align: center; }
+      .input-wrap .lnr.right-icon .password-tooltip li {
+        font-size: 16px;
+        padding: 4px;
+        line-height: 24px;
+        height: 24px;
+        color: black; }
+        .input-wrap .lnr.right-icon .password-tooltip li:hover {
+          background-color: #ddd; }
   .input-wrap .input-wrapper {
     position: relative;
     padding-left: 50px;
@@ -805,6 +825,19 @@ form .camera-wrap {
 /* The finishing CSS styles for the enter animation */
 .fade.ng-enter.ng-enter-active {
   opacity: 1; }
+
+.fade.ng-hide {
+  opacity: 0; }
+
+.fade.ng-hide-remove,
+.fade.ng-hide-add {
+  display: block !important; }
+
+.fade.ng-hide-remove {
+  transition: all linear 200ms; }
+
+.fade.ng-hide-add {
+  transition: all linear 200ms; }
 
 .list-background {
   padding-bottom: 75px;
@@ -918,3 +951,12 @@ form .camera-wrap {
 .mg-top-h2 {
   margin-top: 50px;
   float: left; }
+
+.input-message {
+  position: absolute;
+  bottom: -20px;
+  left: 50px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  color: #f36; }

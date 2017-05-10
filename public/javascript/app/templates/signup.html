@@ -1,4 +1,4 @@
-<form>
+<form name="form" novalidate>
   <a href="/signin"><span class="lnr lnr-arrow-left"></span></a>
   <div class="input-wrap">
     <h2>New Account</h2>
@@ -9,11 +9,24 @@
       </div>
       <input type="file" id="file" name="file" accept="image/*" onchange="angular.element(this).scope().loadFile(this)" />
     </div>
-    <div class="input-wrapper"><span class="lnr lnr-envelope left-icon"></span><input class="input" type="text" ng-model="userValues.email" placeholder="Email Address" /></div>
-    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.password" placeholder="Password" /></span></div>
-    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.passwordConfirmation" placeholder="Password Confirmation" /></span></div>
+    <div class="input-wrapper"><span class="lnr lnr-envelope left-icon"></span><input class="input" type="text" ng-model="userValues.email" placeholder="Email Address" name="email" required />
+      <div class="input-message" ng-show="form.$submitted || form.email.$touched">
+        <span ng-show="form.email.$error.required">Email Address required</span>
+        <span ng-show="form.email.$error.email">Invalid Email Address.</span>
+      </div>
+    </div>
+    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.password" placeholder="Password" name="password" required /></span>
+      <div class="input-message" ng-show="form.$submitted || form.password.$touched">
+        <div ng-show="form.password.$error.required">Password required.</div>
+      </div>
+    </div>
+    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.passwordConfirmation" placeholder="Password Confirmation" name="passwordConfirmation" required /></span>
+      <div class="input-message" ng-show="form.$submitted || form.passwordConfirmation.$touched">
+        <div ng-show="form.passwordConfirmation.$error.required">Password Confirmation required.</div>
+      </div>
+    </div>
   </div>
   <div class="btn-wrap">
-    <button class="btn" ng-click="createAccount()">Create</button>
+    <input class="btn" ng-click="createAccount()" type="submit" value="Create">
   </div>
 </form>
