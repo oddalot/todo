@@ -1,9 +1,13 @@
 <form>
   <div class="overflow-hidden list-background">
     <h2 class="mg-left-25 mg-top-h2">To Do List</h2>
-    <div ng-click="auth.$signOut()" class="user-image-wrap">
-      <img class="user-image" firebase-src="/images/{{uid}}/userImage" />
-      <div class="user-image-dot"></div>
+    <div class="user-image-container">
+      <div ng-click="showTooltip=!showTooltip" class="user-image-wrap">
+        <img class="user-image" firebase-src="/images/{{uid}}/userImage" />
+        <div class="user-image-dot"></div>
+      </div>
+      <div style="clear: both;"></div>
+      <div ng-show="showTooltip" class="user-tooltip fade"><ul><li ng-click="auth.$signOut();showTooltip=false">Log out</li></ul></div>
     </div>
   </div>
 

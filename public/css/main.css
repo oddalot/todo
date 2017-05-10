@@ -923,6 +923,9 @@ form .camera-wrap {
 #file {
   display: none; }
 
+.user-image-container {
+  position: relative; }
+
 .user-image-wrap {
   position: relative;
   width: 40px;
@@ -960,3 +963,25 @@ form .camera-wrap {
   font-style: normal;
   font-weight: 300;
   color: #f36; }
+
+.user-tooltip {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 200px;
+  background-color: #fff;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+  .user-tooltip ul {
+    text-align: center; }
+  .user-tooltip li {
+    font-size: 16px;
+    padding: 4px;
+    line-height: 24px;
+    height: 24px;
+    color: black;
+    cursor: pointer; }
+    .user-tooltip li:hover {
+      background-color: #ddd; }

@@ -338,6 +338,10 @@ form {
   display: none;
 }
 
+.user-image-container {
+  position: relative;
+}
+
 .user-image-wrap {
   position: relative;
   width: 40px;
@@ -383,3 +387,33 @@ form {
   font-weight: 300;
   color: $td-pink;
 }
+
+.user-tooltip {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 200px;
+  background-color: $td-white;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    font-size: 16px;
+    padding: 4px;
+    line-height: 24px;
+    height: 24px;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
+
