@@ -803,8 +803,8 @@ form .camera-wrap {
 
 .check-logo {
   display: block;
-  margin: 110px auto;
-  width: 200px; }
+  margin: 20% auto;
+  width: 40%; }
 
 .bottom-links {
   color: rgba(255, 255, 255, 0.6);
@@ -890,7 +890,8 @@ form .camera-wrap {
     position: absolute;
     right: 40px;
     top: 32px;
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7); }
   .list-wrap .list-item-input {
     border: none;
     background-color: transparent;
