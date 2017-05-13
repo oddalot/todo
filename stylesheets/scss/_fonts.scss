@@ -619,3 +619,9 @@
 }
 
 $Lato: 'Lato', sans-serif;
+
+@mixin lato-font() {
+  font-family: $Lato;
+  font-style: normal;
+  font-weight: 300;
+}

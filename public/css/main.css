@@ -657,7 +657,15 @@ table {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
 html {
-  font-family: 'Lato-Light'; }
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 300; }
+
+input, button, select, textarea, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
 
 body {
   background-image: url("images/overlay.png"), linear-gradient(to bottom, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), linear-gradient(90deg, #670d10 0%, #092756 100%);
@@ -669,9 +677,6 @@ body {
 a {
   text-decoration: none;
   font-size: 18px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
   color: rgba(255, 255, 255, 0.9); }
 
 .main-container {
@@ -681,9 +686,6 @@ a {
 
 h2 {
   font-size: 34px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
   color: #fff; }
 
 .btn-wrap {
@@ -697,9 +699,6 @@ h2 {
   color: #fff;
   width: 100%;
   border-radius: 50px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
   cursor: pointer; }
 
 form .lnr-arrow-left {
@@ -749,25 +748,26 @@ form .camera-wrap {
     position: absolute;
     right: 25px;
     top: 14px;
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.9); }
     .input-wrap .lnr.right-icon .password-tooltip {
       position: absolute;
       top: 100%;
       right: 100%;
       width: 200px;
       background-color: #fff;
-      font-family: 'Lato';
-      font-style: normal;
-      font-weight: 300;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 0 4px gba(0, 0, 0, 0.2); }
       .input-wrap .lnr.right-icon .password-tooltip ul {
         text-align: center; }
       .input-wrap .lnr.right-icon .password-tooltip li {
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 300;
         font-size: 16px;
         padding: 4px;
         line-height: 24px;
         height: 24px;
-        color: black; }
+        color: #000; }
         .input-wrap .lnr.right-icon .password-tooltip li:hover {
           background-color: #ddd; }
   .input-wrap .input-wrapper {
@@ -782,10 +782,7 @@ form .camera-wrap {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     color: #fff;
     width: 100%;
-    font-size: 18px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300; }
+    font-size: 18px; }
     .input-wrap .input::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: #fff; }
@@ -812,10 +809,7 @@ form .camera-wrap {
   margin-bottom: 25px;
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300; }
+  font-size: 18px; }
 
 /* The starting CSS styles for the enter animation */
 .fade.ng-enter {
@@ -866,10 +860,7 @@ form .camera-wrap {
     height: 85px;
     font-size: 20px;
     line-height: 85px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-left: 90px; }
   .list-wrap .item-circle {
     position: absolute;
@@ -891,13 +882,10 @@ form .camera-wrap {
     right: 40px;
     top: 32px;
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.7); }
+    color: rgba(0, 0, 0, 0.9); }
   .list-wrap .list-item-input {
     border: none;
     background-color: transparent;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300;
     font-size: 20px; }
     .list-wrap .list-item-input::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
@@ -960,9 +948,6 @@ form .camera-wrap {
   position: absolute;
   bottom: -20px;
   left: 50px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
   color: #f36; }
 
 .user-tooltip {
@@ -971,10 +956,7 @@ form .camera-wrap {
   right: 55px;
   width: 200px;
   background-color: #fff;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2); }
   .user-tooltip ul {
     text-align: center; }
   .user-tooltip li {
@@ -982,7 +964,7 @@ form .camera-wrap {
     padding: 4px;
     line-height: 24px;
     height: 24px;
-    color: black;
+    color: #000;
     cursor: pointer; }
     .user-tooltip li:hover {
       background-color: #ddd; }
