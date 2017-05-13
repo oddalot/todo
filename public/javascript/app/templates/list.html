@@ -2,7 +2,7 @@
   <div class="overflow-hidden list-background">
     <h2 class="mg-left-25 mg-top-h2">To Do List</h2>
     <div class="user-image-container">
-      <div ng-click="showTooltip=true;$event.stopPropagation();" td-off-click="showTooltip=false" class="user-image-wrap">
+      <div td-off-click="showTooltip=false" td-on-click="showTooltip=!showTooltip" class="user-image-wrap">
         <img class="user-image" firebase-src="/images/{{uid}}/userImage" />
         <div class="user-image-dot"></div>
       </div>

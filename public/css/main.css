@@ -677,7 +677,7 @@ body {
 a {
   text-decoration: none;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.9); }
+  color: #eee; }
 
 .main-container {
   margin: 0 auto;
@@ -711,7 +711,7 @@ form .camera-wrap {
   width: 120px;
   height: 120px;
   border-radius: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   position: relative;
   cursor: pointer; }
   form .camera-wrap .lnr-camera {
@@ -738,8 +738,8 @@ form .camera-wrap {
     margin: 10px 0; }
   .input-wrap .lnr {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 20px; }
+    color: #ddd;
+    font-size: 24px; }
   .input-wrap .lnr.left-icon {
     position: absolute;
     left: 0;
@@ -748,8 +748,7 @@ form .camera-wrap {
     position: absolute;
     right: 25px;
     top: 14px;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.9); }
+    cursor: pointer; }
     .input-wrap .lnr.right-icon .password-tooltip {
       position: absolute;
       top: 100%;
@@ -804,7 +803,7 @@ form .camera-wrap {
   width: 40%; }
 
 .bottom-links {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ddd;
   margin: 0 auto;
   margin-bottom: 25px;
   text-align: center;
@@ -860,7 +859,7 @@ form .camera-wrap {
     height: 85px;
     font-size: 20px;
     line-height: 85px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #aaa;
     padding-left: 90px; }
   .list-wrap .item-circle {
     position: absolute;
@@ -882,7 +881,7 @@ form .camera-wrap {
     right: 40px;
     top: 32px;
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.9); }
+    color: #111; }
   .list-wrap .list-item-input {
     border: none;
     background-color: transparent;
@@ -956,7 +955,7 @@ form .camera-wrap {
   right: 55px;
   width: 200px;
   background-color: #fff;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2); }
+  box-shadow: 0 0 4px #aaa; }
   .user-tooltip ul {
     text-align: center; }
   .user-tooltip li {
