@@ -27,173 +27,19 @@ a {
   color: $td-slight-off-white;
 }
 
-.main-container {
-  margin: 0 auto;
-  max-width: 480px;
-  min-width: 360px;
+h1 {
+  color: $td-white;
+  font-size: 40px;
 }
 
 h2 {
+  color: $td-white;
   font-size: 34px;
+}
+
+h3 {
   color: $td-white;
-}
-
-.btn-wrap {
-  padding: 50px 25px;
-}
-
-.btn {
-  border: none;
-  padding: 20px 0;
-  background-color: $td-pink;
-  font-size: 20px;
-  color: $td-white;
-  width: 100%;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-form {
-  .lnr-arrow-left {
-    display: inline-block;
-    margin: 20px 14px;
-    font-size: 30px;
-  }
-
-  .camera-wrap {
-    margin: 50px auto;
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    background-color: $td-clear-gray;
-    position: relative;
-    cursor: pointer;
-
-    .lnr-camera {
-      position: absolute;
-      font-size: 40px;
-      font-weight: 100;
-      top: 39px;
-      left: 42px;
-    }
-
-    .image-preview-wrap {
-      position: absolute;
-      top: 40px;
-      left: 40px;
-      width: 40px;
-      height: 40px;
-
-      #image-preview {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
-    }
-  }
-}
-
-.input-wrap {
-  padding-left: 25px;
-
-  h2 {
-    margin: 10px 0;
-  }
-
-  .lnr {
-    display: inline-block;
-    color: $td-off-white;
-    font-size: 24px;
-  }
-
-  .lnr.left-icon {
-    position: absolute;
-    left: 0;
-    top: 14px;
-  }
-
-  .lnr.right-icon {
-    position: absolute;
-    right: 25px;
-    top: 14px;
-    cursor: pointer;
-
-    .password-tooltip {
-      position: absolute;
-      top: 100%;
-      right: 100%;
-      width: 200px;
-      background-color: $td-white;
-      box-shadow: 0 0 4px gba(0,0,0,0.2);
-
-      ul {
-        text-align: center;
-      }
-
-      li {
-        @include lato-font();
-        font-size: 16px;
-        padding: 4px;
-        line-height: 24px;
-        height: 24px;
-        color: $td-black;
-
-        &:hover {
-          background-color: #ddd;
-        }
-      }
-    }
-  }
-
-  .input-wrapper {
-    position: relative;
-    padding-left: 50px;
-    margin-bottom: 25px;
-  }
-
-  .input {
-    display: inline-block;
-    border: none;
-    padding: 14px 0 14px 0;
-    background-color: transparent;
-    border-bottom: 2px solid $td-clear-light-white;
-    color: $td-white;
-    width: 100%;
-    font-size: 18px;
-
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: $td-white;
-    }
-    &::-moz-placeholder { /* Firefox 19+ */
-      color: $td-white;
-    }
-    &:-ms-input-placeholder { /* IE 10+ */
-      color: $td-white;
-    }
-    &:-moz-placeholder { /* Firefox 18- */
-      color: $td-white;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-.check-logo {
-  display: block;
-  margin: 20% auto;
-  width: 40%;
-}
-
-.bottom-links {
-  color: $td-off-white;
-  margin: 0 auto;
-  margin-bottom: 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 /* The starting CSS styles for the enter animation */
@@ -224,175 +70,335 @@ form {
   transition: all linear 200ms;
 }
 
-.list-background {
-  padding-bottom: 75px;
-  background-image: linear-gradient(to top left, rgba(103, 13, 16, 0.5), rgba(9, 39, 86, 0.7)), url('images/mountain.jpg'), ;
-  background-size: cover, cover;
+.main-container {
+  margin: 0 auto;
+  max-width: 480px;
+  min-width: 360px;
 }
 
-.list-wrap {
-  position: relative;
-  background-color: $td-white;
+.signin-page {
+  .check-logo {
+    display: block;
+    margin: 20% auto;
+    width: 40%;
+  }
+}
 
-  .plus-button {
-    position: absolute;
-    top: -30px;
-    right: 15px;
-    font-size: 50px;
-    background-color: $td-pink;
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-    text-align: center;
-    color: $td-white;
-    border-radius: 100%;
-    z-index: 100;
-    cursor: pointer;
+.signup-page {
+  .back-arrow {
+    display: inline-block;
+    margin: 20px 14px;
+    font-size: 30px;
+  }
+}
+
+.list-page {
+  .list-title {
+    margin-top: 50px;
+    float: left;
+    margin-left: 25px;
   }
 
-  .list-item-wrap {
+  .user-tooltip {
+    position: absolute;
+    top: 63px;
+    right: 55px;
+    width: 200px;
+    background-color: $td-white;
+    box-shadow: 0 0 4px $td-light-gray;
+
+    ul {
+      text-align: center;
+    }
+
+    li {
+      font-size: 16px;
+      padding: 4px;
+      line-height: 24px;
+      height: 24px;
+      color: $td-black;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+
+  .list-background {
+    overflow: hidden;
+    padding-bottom: 75px;
+    background-image: linear-gradient(to top left, rgba(103, 13, 16, 0.5), rgba(9, 39, 86, 0.7)), url('images/mountain.jpg'), ;
+    background-size: cover, cover;
+  }
+
+  .list-wrap {
     position: relative;
-    height: 85px;
-    font-size: 20px;
-    line-height: 85px;
-    border-bottom: 1px solid $td-light-gray;
-    padding-left: 90px;
+    background-color: $td-white;
+
+    .plus-button {
+      position: absolute;
+      top: -30px;
+      right: 15px;
+      font-size: 50px;
+      background-color: $td-pink;
+      height: 60px;
+      width: 60px;
+      line-height: 58px;
+      text-align: center;
+      color: $td-white;
+      border-radius: 100%;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    .list-item-wrap {
+      position: relative;
+      height: 85px;
+      font-size: 20px;
+      line-height: 85px;
+      border-bottom: 1px solid $td-light-gray;
+      padding-left: 90px;
+    }
+
+    .item-circle {
+      position: absolute;
+      top: 25px;
+      left: 35px;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: #ccc;
+      cursor: pointer;
+    }
+
+    .lnr-checkmark-circle {
+      position: absolute;
+      top: 25px;
+      left: 34px;
+      font-size: 34px;
+      cursor: pointer;
+    }
+
+    .lnr-trash {
+      position: absolute;
+      right: 40px;
+      top: 32px;
+      cursor: pointer;
+      color: $td-off-black;
+    }
+
+    .list-item-input {
+      border: none;
+      background-color: transparent;
+      font-size: 20px;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $td-white;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $td-white;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $td-white;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $td-white;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
-  .item-circle {
-    position: absolute;
-    top: 25px;
-    left: 35px;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    background-color: #ccc;
+  .user-image-wrap {
+    position: relative;
+    width: 40px;
+    height: 40px; 
+    overflow: hidden;
+    float: right;
+    margin: 24px 14px 0 0;
     cursor: pointer;
+
+    .user-image-dot {
+      position: absolute;
+      top: 8px;
+      right: 4px;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background-color: $td-pink;
+    }
+
+    .user-image {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
   }
 
-  .lnr-checkmark-circle {
-    position: absolute;
-    top: 25px;
-    left: 34px;
-    font-size: 34px;
-    cursor: pointer;
+  #file {
+    display: none;
   }
 
-  .lnr-trash {
-    position: absolute;
-    right: 40px;
-    top: 32px;
-    cursor: pointer;
-    color: $td-off-black;
-  }
-
-  .list-item-input {
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: $td-white;
-    }
-    &::-moz-placeholder { /* Firefox 19+ */
-      color: $td-white;
-    }
-    &:-ms-input-placeholder { /* IE 10+ */
-      color: $td-white;
-    }
-    &:-moz-placeholder { /* Firefox 18- */
-      color: $td-white;
-    }
-
-    &:focus {
-      outline: none;
-    }
+  .user-image-container {
+    position: relative;
   }
 }
 
-.mg-left-25 {
-  margin-left: 25px;
+.btn-wrap {
+  padding: 50px 25px;
 }
 
-.mg-top-10 {
-  margin-top: 10px;
-  float: left;
-}
-
-#file {
-  display: none;
-}
-
-.user-image-container {
-  position: relative;
-}
-
-.user-image-wrap {
-  position: relative;
-  width: 40px;
-  height: 40px; 
-  overflow: hidden;
-  float: right;
-  margin: 24px 14px 0 0;
+.btn {
+  border: none;
+  padding: 20px 0;
+  background-color: $td-pink;
+  font-size: 20px;
+  color: $td-white;
+  width: 100%;
+  border-radius: 50px;
   cursor: pointer;
+}
 
-  .user-image-dot {
-    position: absolute;
-    top: 8px;
-    right: 4px;
-    width: 5px;
-    height: 5px;
+.input-form {
+  .camera-wrap {
+    margin: 50px auto;
+    width: 120px;
+    height: 120px;
     border-radius: 100%;
-    background-color: $td-pink;
-  }
-
-  .user-image {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.mg-top-h2 {
-  margin-top: 50px;
-  float: left;
-}
-
-.input-message {
-  position: absolute;
-  bottom: -20px;
-  left: 50px;
-  color: $td-pink;
-}
-
-.user-tooltip {
-  position: absolute;
-  top: 63px;
-  right: 55px;
-  width: 200px;
-  background-color: $td-white;
-  box-shadow: 0 0 4px $td-light-gray;
-
-  ul {
-    text-align: center;
-  }
-
-  li {
-    font-size: 16px;
-    padding: 4px;
-    line-height: 24px;
-    height: 24px;
-    color: $td-black;
+    background-color: $td-clear-gray;
+    position: relative;
     cursor: pointer;
 
-    &:hover {
-      background-color: #ddd;
+    #camera-icon {
+      position: absolute;
+      font-size: 40px;
+      font-weight: 100;
+      top: 39px;
+      left: 42px;
+      color: $td-off-white;
     }
+
+    .image-preview-wrap {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 40px;
+      height: 40px;
+
+      #image-preview {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .input-wrap {
+    padding-left: 25px;
+
+    .form-title {
+      margin: 10px 0;
+    }
+
+    .input-icon {
+      display: inline-block;
+      color: $td-off-white;
+      font-size: 24px;
+    }
+
+    .input-icon.left-icon {
+      position: absolute;
+      left: 0;
+      top: 14px;
+    }
+
+    .input-icon.right-icon {
+      position: absolute;
+      right: 25px;
+      top: 14px;
+      cursor: pointer;
+
+      .password-tooltip {
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 200px;
+        background-color: $td-white;
+        box-shadow: 0 0 4px gba(0,0,0,0.2);
+
+        ul {
+          text-align: center;
+        }
+
+        li {
+          @include lato-font();
+          font-size: 16px;
+          padding: 4px;
+          line-height: 24px;
+          height: 24px;
+          color: $td-black;
+
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+
+    .input-wrapper {
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 25px;
+    }
+
+    .input {
+      display: inline-block;
+      border: none;
+      padding: 14px 0 14px 0;
+      background-color: transparent;
+      border-bottom: 2px solid $td-clear-light-white;
+      color: $td-white;
+      width: 100%;
+      font-size: 18px;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $td-white;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $td-white;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $td-white;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $td-white;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    color: $td-pink;
+  }
+
+  .bottom-links {
+    color: $td-off-white;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
   }
 }
 

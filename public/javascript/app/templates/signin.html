@@ -1,22 +1,24 @@
-<form name="form" ng-submit="form.$valid && signIn()" novalidate>
-  <img class="check-logo" src="/images/check-logo.svg" alt="" />
-  <div class="input-wrap">
-    <div class="input-wrapper"><span class="lnr lnr-envelope left-icon"></span><input class="input" name="email" type="text" ng-model="userValues.email" placeholder="Email Address" required />
-      <div class="input-message" ng-show="form.$submitted || form.email.$touched">
-        <span ng-show="form.email.$error.required">Email Address required</span>
-        <span ng-show="form.email.$error.email">Invalid Email Address</span>
+<div class="signin-page">
+  <form name="form" class="input-form" ng-submit="form.$valid && signIn()" novalidate>
+    <img class="check-logo" src="/images/check-logo.svg" alt="" />
+    <div class="input-wrap">
+      <div class="input-wrapper"><span class="lnr lnr-envelope input-icon left-icon"></span><input class="input" name="email" type="text" ng-model="userValues.email" placeholder="Email Address" required />
+        <div class="input-message" ng-show="form.$submitted || form.email.$touched">
+          <span ng-show="form.email.$error.required">Email Address required</span>
+          <span ng-show="form.email.$error.email">Invalid Email Address</span>
+        </div>
+      </div>
+      <div class="input-wrapper"><span class="lnr lnr-lock input-icon left-icon"></span><input class="input" type="password" ng-model="userValues.password" placeholder="Password" name="password" required /><span td-on-click="showTooltip=!showTooltip" td-off-click="showTooltip=false" class="lnr lnr-question-circle input-icon right-icon"><div ng-show="showTooltip" class="password-tooltip fade"><ul><li ng-click="sendPasswordReset();showTooltip=false">Send password reset</li></ul></div></span>
+        <div class="input-message" ng-show="form.$submitted || form.password.$touched">
+          <div ng-show="form.password.$error.required">Password required</div>
+        </div>
       </div>
     </div>
-    <div class="input-wrapper"><span class="lnr lnr-lock left-icon"></span><input class="input" type="password" ng-model="userValues.password" placeholder="Password" name="password" required /><span td-on-click="showTooltip=!showTooltip" td-off-click="showTooltip=false" class="lnr lnr-question-circle right-icon"><div ng-show="showTooltip" class="password-tooltip fade"><ul><li ng-click="sendPasswordReset();showTooltip=false">Send password reset</li></ul></div></span>
-      <div class="input-message" ng-show="form.$submitted || form.password.$touched">
-        <div ng-show="form.password.$error.required">Password required</div>
-      </div>
+    <div class="btn-wrap">
+      <input class="btn" type="submit" value="Sign In">
     </div>
-  </div>
-  <div class="btn-wrap">
-    <input class="btn" type="submit" value="Sign In">
-  </div>
-  <div class="bottom-links">
-    Don't have an account? <a href="/signup">Sign Up</a>
-  </div>
-</form>
+    <div class="bottom-links">
+      Don't have an account? <a href="/signup">Sign Up</a>
+    </div>
+  </form>
+</div>

@@ -679,136 +679,17 @@ a {
   font-size: 18px;
   color: #eee; }
 
-.main-container {
-  margin: 0 auto;
-  max-width: 480px;
-  min-width: 360px; }
+h1 {
+  color: #fff;
+  font-size: 40px; }
 
 h2 {
-  font-size: 34px;
-  color: #fff; }
-
-.btn-wrap {
-  padding: 50px 25px; }
-
-.btn {
-  border: none;
-  padding: 20px 0;
-  background-color: #f36;
-  font-size: 20px;
   color: #fff;
-  width: 100%;
-  border-radius: 50px;
-  cursor: pointer; }
+  font-size: 34px; }
 
-form .lnr-arrow-left {
-  display: inline-block;
-  margin: 20px 14px;
-  font-size: 30px; }
-
-form .camera-wrap {
-  margin: 50px auto;
-  width: 120px;
-  height: 120px;
-  border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  position: relative;
-  cursor: pointer; }
-  form .camera-wrap .lnr-camera {
-    position: absolute;
-    font-size: 40px;
-    font-weight: 100;
-    top: 39px;
-    left: 42px; }
-  form .camera-wrap .image-preview-wrap {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 40px;
-    height: 40px; }
-    form .camera-wrap .image-preview-wrap #image-preview {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0; }
-
-.input-wrap {
-  padding-left: 25px; }
-  .input-wrap h2 {
-    margin: 10px 0; }
-  .input-wrap .lnr {
-    display: inline-block;
-    color: #ddd;
-    font-size: 24px; }
-  .input-wrap .lnr.left-icon {
-    position: absolute;
-    left: 0;
-    top: 14px; }
-  .input-wrap .lnr.right-icon {
-    position: absolute;
-    right: 25px;
-    top: 14px;
-    cursor: pointer; }
-    .input-wrap .lnr.right-icon .password-tooltip {
-      position: absolute;
-      top: 100%;
-      right: 100%;
-      width: 200px;
-      background-color: #fff;
-      box-shadow: 0 0 4px gba(0, 0, 0, 0.2); }
-      .input-wrap .lnr.right-icon .password-tooltip ul {
-        text-align: center; }
-      .input-wrap .lnr.right-icon .password-tooltip li {
-        font-family: "Lato", sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        padding: 4px;
-        line-height: 24px;
-        height: 24px;
-        color: #000; }
-        .input-wrap .lnr.right-icon .password-tooltip li:hover {
-          background-color: #ddd; }
-  .input-wrap .input-wrapper {
-    position: relative;
-    padding-left: 50px;
-    margin-bottom: 25px; }
-  .input-wrap .input {
-    display: inline-block;
-    border: none;
-    padding: 14px 0 14px 0;
-    background-color: transparent;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    width: 100%;
-    font-size: 18px; }
-    .input-wrap .input::-webkit-input-placeholder {
-      /* Chrome/Opera/Safari */
-      color: #fff; }
-    .input-wrap .input::-moz-placeholder {
-      /* Firefox 19+ */
-      color: #fff; }
-    .input-wrap .input:-ms-input-placeholder {
-      /* IE 10+ */
-      color: #fff; }
-    .input-wrap .input:-moz-placeholder {
-      /* Firefox 18- */
-      color: #fff; }
-    .input-wrap .input:focus {
-      outline: none; }
-
-.check-logo {
-  display: block;
-  margin: 20% auto;
-  width: 40%; }
-
-.bottom-links {
-  color: #ddd;
-  margin: 0 auto;
-  margin-bottom: 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px; }
+h3 {
+  color: #fff;
+  font-size: 28px; }
 
 /* The starting CSS styles for the enter animation */
 .fade.ng-enter {
@@ -832,15 +713,55 @@ form .camera-wrap {
 .fade.ng-hide-add {
   transition: all linear 200ms; }
 
-.list-background {
+.main-container {
+  margin: 0 auto;
+  max-width: 480px;
+  min-width: 360px; }
+
+.signin-page .check-logo {
+  display: block;
+  margin: 20% auto;
+  width: 40%; }
+
+.signup-page .back-arrow {
+  display: inline-block;
+  margin: 20px 14px;
+  font-size: 30px; }
+
+.list-page .list-title {
+  margin-top: 50px;
+  float: left;
+  margin-left: 25px; }
+
+.list-page .user-tooltip {
+  position: absolute;
+  top: 63px;
+  right: 55px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 0 4px #aaa; }
+  .list-page .user-tooltip ul {
+    text-align: center; }
+  .list-page .user-tooltip li {
+    font-size: 16px;
+    padding: 4px;
+    line-height: 24px;
+    height: 24px;
+    color: #000;
+    cursor: pointer; }
+    .list-page .user-tooltip li:hover {
+      background-color: #ddd; }
+
+.list-page .list-background {
+  overflow: hidden;
   padding-bottom: 75px;
   background-image: linear-gradient(to top left, rgba(103, 13, 16, 0.5), rgba(9, 39, 86, 0.7)), url("images/mountain.jpg");
   background-size: cover, cover; }
 
-.list-wrap {
+.list-page .list-wrap {
   position: relative;
   background-color: #fff; }
-  .list-wrap .plus-button {
+  .list-page .list-wrap .plus-button {
     position: absolute;
     top: -30px;
     right: 15px;
@@ -848,20 +769,20 @@ form .camera-wrap {
     background-color: #f36;
     height: 60px;
     width: 60px;
-    line-height: 60px;
+    line-height: 58px;
     text-align: center;
     color: #fff;
     border-radius: 100%;
     z-index: 100;
     cursor: pointer; }
-  .list-wrap .list-item-wrap {
+  .list-page .list-wrap .list-item-wrap {
     position: relative;
     height: 85px;
     font-size: 20px;
     line-height: 85px;
     border-bottom: 1px solid #aaa;
     padding-left: 90px; }
-  .list-wrap .item-circle {
+  .list-page .list-wrap .item-circle {
     position: absolute;
     top: 25px;
     left: 35px;
@@ -870,51 +791,38 @@ form .camera-wrap {
     border-radius: 100%;
     background-color: #ccc;
     cursor: pointer; }
-  .list-wrap .lnr-checkmark-circle {
+  .list-page .list-wrap .lnr-checkmark-circle {
     position: absolute;
     top: 25px;
     left: 34px;
     font-size: 34px;
     cursor: pointer; }
-  .list-wrap .lnr-trash {
+  .list-page .list-wrap .lnr-trash {
     position: absolute;
     right: 40px;
     top: 32px;
     cursor: pointer;
     color: #111; }
-  .list-wrap .list-item-input {
+  .list-page .list-wrap .list-item-input {
     border: none;
     background-color: transparent;
     font-size: 20px; }
-    .list-wrap .list-item-input::-webkit-input-placeholder {
+    .list-page .list-wrap .list-item-input::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: #fff; }
-    .list-wrap .list-item-input::-moz-placeholder {
+    .list-page .list-wrap .list-item-input::-moz-placeholder {
       /* Firefox 19+ */
       color: #fff; }
-    .list-wrap .list-item-input:-ms-input-placeholder {
+    .list-page .list-wrap .list-item-input:-ms-input-placeholder {
       /* IE 10+ */
       color: #fff; }
-    .list-wrap .list-item-input:-moz-placeholder {
+    .list-page .list-wrap .list-item-input:-moz-placeholder {
       /* Firefox 18- */
       color: #fff; }
-    .list-wrap .list-item-input:focus {
+    .list-page .list-wrap .list-item-input:focus {
       outline: none; }
 
-.mg-left-25 {
-  margin-left: 25px; }
-
-.mg-top-10 {
-  margin-top: 10px;
-  float: left; }
-
-#file {
-  display: none; }
-
-.user-image-container {
-  position: relative; }
-
-.user-image-wrap {
+.list-page .user-image-wrap {
   position: relative;
   width: 40px;
   height: 40px;
@@ -922,7 +830,7 @@ form .camera-wrap {
   float: right;
   margin: 24px 14px 0 0;
   cursor: pointer; }
-  .user-image-wrap .user-image-dot {
+  .list-page .user-image-wrap .user-image-dot {
     position: absolute;
     top: 8px;
     right: 4px;
@@ -930,40 +838,133 @@ form .camera-wrap {
     height: 5px;
     border-radius: 100%;
     background-color: #f36; }
-  .user-image-wrap .user-image {
+  .list-page .user-image-wrap .user-image {
     position: absolute;
     width: 100%;
     top: 0;
     left: 0; }
 
-.overflow-hidden {
-  overflow: hidden; }
+.list-page #file {
+  display: none; }
 
-.mg-top-h2 {
-  margin-top: 50px;
-  float: left; }
+.list-page .user-image-container {
+  position: relative; }
 
-.input-message {
+.btn-wrap {
+  padding: 50px 25px; }
+
+.btn {
+  border: none;
+  padding: 20px 0;
+  background-color: #f36;
+  font-size: 20px;
+  color: #fff;
+  width: 100%;
+  border-radius: 50px;
+  cursor: pointer; }
+
+.input-form .camera-wrap {
+  margin: 50px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer; }
+  .input-form .camera-wrap #camera-icon {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 100;
+    top: 39px;
+    left: 42px;
+    color: #ddd; }
+  .input-form .camera-wrap .image-preview-wrap {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 40px;
+    height: 40px; }
+    .input-form .camera-wrap .image-preview-wrap #image-preview {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0; }
+
+.input-form .input-wrap {
+  padding-left: 25px; }
+  .input-form .input-wrap .form-title {
+    margin: 10px 0; }
+  .input-form .input-wrap .input-icon {
+    display: inline-block;
+    color: #ddd;
+    font-size: 24px; }
+  .input-form .input-wrap .input-icon.left-icon {
+    position: absolute;
+    left: 0;
+    top: 14px; }
+  .input-form .input-wrap .input-icon.right-icon {
+    position: absolute;
+    right: 25px;
+    top: 14px;
+    cursor: pointer; }
+    .input-form .input-wrap .input-icon.right-icon .password-tooltip {
+      position: absolute;
+      top: 100%;
+      right: 100%;
+      width: 200px;
+      background-color: #fff;
+      box-shadow: 0 0 4px gba(0, 0, 0, 0.2); }
+      .input-form .input-wrap .input-icon.right-icon .password-tooltip ul {
+        text-align: center; }
+      .input-form .input-wrap .input-icon.right-icon .password-tooltip li {
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        padding: 4px;
+        line-height: 24px;
+        height: 24px;
+        color: #000; }
+        .input-form .input-wrap .input-icon.right-icon .password-tooltip li:hover {
+          background-color: #ddd; }
+  .input-form .input-wrap .input-wrapper {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 25px; }
+  .input-form .input-wrap .input {
+    display: inline-block;
+    border: none;
+    padding: 14px 0 14px 0;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 100%;
+    font-size: 18px; }
+    .input-form .input-wrap .input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #fff; }
+    .input-form .input-wrap .input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #fff; }
+    .input-form .input-wrap .input:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #fff; }
+    .input-form .input-wrap .input:-moz-placeholder {
+      /* Firefox 18- */
+      color: #fff; }
+    .input-form .input-wrap .input:focus {
+      outline: none; }
+
+.input-form .input-message {
   position: absolute;
   bottom: -20px;
   left: 50px;
   color: #f36; }
 
-.user-tooltip {
-  position: absolute;
-  top: 63px;
-  right: 55px;
-  width: 200px;
-  background-color: #fff;
-  box-shadow: 0 0 4px #aaa; }
-  .user-tooltip ul {
-    text-align: center; }
-  .user-tooltip li {
-    font-size: 16px;
-    padding: 4px;
-    line-height: 24px;
-    height: 24px;
-    color: #000;
-    cursor: pointer; }
-    .user-tooltip li:hover {
-      background-color: #ddd; }
+.input-form .bottom-links {
+  color: #ddd;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px; }

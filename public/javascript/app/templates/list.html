@@ -1,23 +1,25 @@
-<form>
-  <div class="overflow-hidden list-background">
-    <h2 class="mg-left-25 mg-top-h2">To Do List</h2>
-    <div class="user-image-container">
-      <div td-off-click="showTooltip=false" td-on-click="showTooltip=!showTooltip" class="user-image-wrap">
-        <img class="user-image" firebase-src="/images/{{uid}}/userImage" />
-        <div class="user-image-dot"></div>
+<div class="list-page">
+  <form>
+    <div class="list-background">
+      <h2 class="list-title">To Do List</h2>
+      <div class="user-image-container">
+        <div td-off-click="showTooltip=false" td-on-click="showTooltip=!showTooltip" class="user-image-wrap">
+          <img class="user-image" firebase-src="/images/{{uid}}/userImage" />
+          <div class="user-image-dot"></div>
+        </div>
+        <div style="clear: both;"></div>
+        <div ng-show="showTooltip" class="user-tooltip fade"><ul><li ng-click="auth.$signOut();showTooltip=false">Log out</li></ul></div>
       </div>
-      <div style="clear: both;"></div>
-      <div ng-show="showTooltip" class="user-tooltip fade"><ul><li ng-click="auth.$signOut();showTooltip=false">Log out</li></ul></div>
     </div>
-  </div>
 
-  <div class="list-wrap">
-    <span class="plus-button" ng-click="addNewItem()">+</span>
-    <div class="list-item-wrap" ng-repeat="listItem in listItems">
-      <span class="item-circle" ng-show="!listItem.checked" ng-click="checkItem(listItem)"></span>
-      <span class="lnr lnr-checkmark-circle" ng-show="listItem.checked" ng-click="uncheckItem(listItem)"></span>
-      <input id="{{listItem.$id}}" class="list-item-input" type="text" ng-model="listItem.text" ng-change="updateItem(listItem)" />
-      <span class="lnr lnr-trash" ng-click="deleteItem(listItem)"></span>
+    <div class="list-wrap">
+      <span class="plus-button" ng-click="addNewItem()">+</span>
+      <div class="list-item-wrap" ng-repeat="listItem in listItems">
+        <span class="item-circle" ng-show="!listItem.checked" ng-click="checkItem(listItem)"></span>
+        <span class="lnr lnr-checkmark-circle" ng-show="listItem.checked" ng-click="uncheckItem(listItem)"></span>
+        <input id="{{listItem.$id}}" class="list-item-input" type="text" ng-model="listItem.text" ng-change="updateItem(listItem)" />
+        <span class="lnr lnr-trash" ng-click="deleteItem(listItem)"></span>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
