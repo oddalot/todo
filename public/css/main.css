@@ -844,16 +844,13 @@ h3 {
     top: 0;
     left: 0; }
 
-.list-page #file {
-  display: none; }
-
 .list-page .user-image-container {
   position: relative; }
 
-.btn-wrap {
+.input-form .btn-wrap {
   padding: 50px 25px; }
 
-.btn {
+.input-form .btn {
   border: none;
   padding: 20px 0;
   background-color: #f36;
@@ -878,6 +875,8 @@ h3 {
     top: 39px;
     left: 42px;
     color: #ddd; }
+  .input-form .camera-wrap #file {
+    display: none; }
   .input-form .camera-wrap .image-preview-wrap {
     position: absolute;
     top: 40px;

@@ -239,31 +239,27 @@ h3 {
     }
   }
 
-  #file {
-    display: none;
-  }
-
   .user-image-container {
     position: relative;
   }
 }
 
-.btn-wrap {
-  padding: 50px 25px;
-}
-
-.btn {
-  border: none;
-  padding: 20px 0;
-  background-color: $td-pink;
-  font-size: 20px;
-  color: $td-white;
-  width: 100%;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
 .input-form {
+  .btn-wrap {
+    padding: 50px 25px;
+  }
+
+  .btn {
+    border: none;
+    padding: 20px 0;
+    background-color: $td-pink;
+    font-size: 20px;
+    color: $td-white;
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
   .camera-wrap {
     margin: 50px auto;
     width: 120px;
@@ -280,6 +276,10 @@ h3 {
       top: 39px;
       left: 42px;
       color: $td-off-white;
+    }
+
+    #file {
+      display: none;
     }
 
     .image-preview-wrap {
